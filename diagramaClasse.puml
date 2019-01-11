@@ -1,0 +1,279 @@
+@startuml
+annotation java.lang.Override
+annotation java.lang.SuppressWarnings
+class ExternalViews.PackageMgmtGUI
+class ExternalViews.branchChooserGUI
+class ExternalViews.clientsMgmtGUI
+class ExternalViews.loginGUI
+class ExternalViews.opsClients
+class ExternalViews.usersMgmtGUI
+class ExternalViews.workersMgmtGUI
+class com.mysql.jdbc.Connection
+class com.mysql.jdbc.PreparedStatement
+class connection.ConnectionFactory
+class dialogs.PackageItemChooserGUI
+class dialogs.UsersOpsGUI
+class dialogs.contatosModal
+class infoGUI.PackageInfoGUI
+class java.sql.Connection
+class java.sql.DriverManager
+class java.sql.ResultSet
+class java.sql.SQLException
+class java.text.SimpleDateFormat
+class java.util.ArrayList
+class java.util.List
+class java.util.logging.Level
+class java.util.logging.Logger
+class javax.swing.DefaultComboBoxModel
+class javax.swing.Icon
+class javax.swing.ImageIcon
+class javax.swing.JDialog
+class javax.swing.JFrame
+class javax.swing.JOptionPane
+class javax.swing.table.DefaultTableModel
+class model.bean.Branchs
+class model.bean.Brands
+class model.bean.Clients
+class model.bean.Deliveries
+class model.bean.DeliveryWays
+class model.bean.Jobs
+class model.bean.Models
+class model.bean.PackageItens
+class model.bean.Packages
+class model.bean.Routes
+class model.bean.RoutesAux
+class model.bean.Users
+class model.bean.Vehicles
+class model.bean.Workers
+class model.dao.BranchsDAO
+class model.dao.BrandsDAO
+class model.dao.ClientsDAO
+class model.dao.DeliveriesDAO
+class model.dao.DeliveryWaysDAO
+class model.dao.JobsDAO
+class model.dao.ModelsDAO
+class model.dao.PackageItensDAO
+class model.dao.PackagesDAO
+class model.dao.RoutesAuxDAO
+class model.dao.RoutesDAO
+class model.dao.UsersDAO
+class model.dao.VehiclesDAO
+class model.dao.WorkersDAO
+class modelsUtil.GenericComboBoxModel
+class tccv1.TCCV1
+ExternalViews.PackageMgmtGUI ..> java.lang.SuppressWarnings
+ExternalViews.PackageMgmtGUI ..> java.util.ArrayList
+ExternalViews.PackageMgmtGUI --|> javax.swing.JFrame
+ExternalViews.PackageMgmtGUI ..> javax.swing.table.DefaultTableModel
+ExternalViews.PackageMgmtGUI ..> model.bean.Packages
+ExternalViews.PackageMgmtGUI ..> model.dao.PackagesDAO
+ExternalViews.branchChooserGUI ..> java.lang.SuppressWarnings
+ExternalViews.branchChooserGUI ..> java.util.ArrayList
+ExternalViews.branchChooserGUI --|> javax.swing.JFrame
+ExternalViews.branchChooserGUI ..> javax.swing.JOptionPane
+ExternalViews.branchChooserGUI ..> model.bean.Branchs
+ExternalViews.branchChooserGUI ..> model.dao.BranchsDAO
+ExternalViews.clientsMgmtGUI ..> java.lang.SuppressWarnings
+ExternalViews.clientsMgmtGUI ..> dialogs.contatosModal
+ExternalViews.clientsMgmtGUI ..> java.util.ArrayList
+ExternalViews.clientsMgmtGUI ..> javax.swing.DefaultComboBoxModel
+ExternalViews.clientsMgmtGUI --|> javax.swing.JFrame
+ExternalViews.clientsMgmtGUI ..> javax.swing.JOptionPane
+ExternalViews.clientsMgmtGUI ..> javax.swing.table.DefaultTableModel
+ExternalViews.clientsMgmtGUI ..> model.bean.Branchs
+ExternalViews.clientsMgmtGUI ..> model.bean.Clients
+ExternalViews.clientsMgmtGUI ..> model.bean.Jobs
+ExternalViews.clientsMgmtGUI ..> model.dao.BranchsDAO
+ExternalViews.clientsMgmtGUI ..> model.dao.ClientsDAO
+ExternalViews.loginGUI ..> java.lang.SuppressWarnings
+ExternalViews.loginGUI --|> javax.swing.JFrame
+ExternalViews.loginGUI ..> javax.swing.JOptionPane
+ExternalViews.loginGUI ..> model.bean.Users
+ExternalViews.loginGUI ..> model.dao.UsersDAO
+ExternalViews.opsClients ..> java.lang.SuppressWarnings
+ExternalViews.opsClients ..> com.mysql.jdbc.Connection
+ExternalViews.opsClients ..> com.mysql.jdbc.PreparedStatement
+ExternalViews.opsClients ..> connection.ConnectionFactory
+ExternalViews.opsClients ..> java.sql.ResultSet
+ExternalViews.opsClients ..> java.sql.SQLException
+ExternalViews.opsClients ..> java.util.ArrayList
+ExternalViews.opsClients ..> javax.swing.DefaultComboBoxModel
+ExternalViews.opsClients --|> javax.swing.JFrame
+ExternalViews.opsClients ..> javax.swing.JOptionPane
+ExternalViews.opsClients ..> model.bean.Branchs
+ExternalViews.opsClients ..> model.bean.Clients
+ExternalViews.opsClients ..> model.dao.BranchsDAO
+ExternalViews.opsClients ..> model.dao.ClientsDAO
+ExternalViews.usersMgmtGUI ..> java.lang.SuppressWarnings
+ExternalViews.usersMgmtGUI ..> java.util.ArrayList
+ExternalViews.usersMgmtGUI --|> javax.swing.JFrame
+ExternalViews.usersMgmtGUI ..> javax.swing.table.DefaultTableModel
+ExternalViews.usersMgmtGUI ..> model.bean.Users
+ExternalViews.usersMgmtGUI ..> model.dao.UsersDAO
+ExternalViews.workersMgmtGUI ..> java.lang.SuppressWarnings
+ExternalViews.workersMgmtGUI ..> dialogs.contatosModal
+ExternalViews.workersMgmtGUI ..> java.util.ArrayList
+ExternalViews.workersMgmtGUI --|> javax.swing.JFrame
+ExternalViews.workersMgmtGUI ..> javax.swing.JOptionPane
+ExternalViews.workersMgmtGUI ..> javax.swing.table.DefaultTableModel
+ExternalViews.workersMgmtGUI ..> model.bean.Jobs
+ExternalViews.workersMgmtGUI ..> model.bean.Workers
+ExternalViews.workersMgmtGUI ..> model.dao.WorkersDAO
+connection.ConnectionFactory ..> com.mysql.jdbc.PreparedStatement
+connection.ConnectionFactory ..> java.sql.Connection
+connection.ConnectionFactory ..> java.sql.DriverManager
+connection.ConnectionFactory ..> java.sql.ResultSet
+connection.ConnectionFactory ..> java.sql.SQLException
+connection.ConnectionFactory ..> java.util.logging.Level
+connection.ConnectionFactory ..> java.util.logging.Logger
+dialogs.PackageItemChooserGUI ..> java.lang.Override
+dialogs.PackageItemChooserGUI ..> java.lang.SuppressWarnings
+dialogs.PackageItemChooserGUI --|> javax.swing.JDialog
+dialogs.UsersOpsGUI ..> java.lang.Override
+dialogs.UsersOpsGUI ..> java.lang.SuppressWarnings
+dialogs.UsersOpsGUI --|> javax.swing.JDialog
+dialogs.UsersOpsGUI ..> javax.swing.JOptionPane
+dialogs.UsersOpsGUI ..> model.bean.Users
+dialogs.UsersOpsGUI ..> model.dao.UsersDAO
+dialogs.contatosModal ..> java.lang.Override
+dialogs.contatosModal ..> java.lang.SuppressWarnings
+dialogs.contatosModal ..> com.mysql.jdbc.Connection
+dialogs.contatosModal ..> com.mysql.jdbc.PreparedStatement
+dialogs.contatosModal ..> connection.ConnectionFactory
+dialogs.contatosModal ..> java.sql.ResultSet
+dialogs.contatosModal --|> javax.swing.JDialog
+dialogs.contatosModal ..> javax.swing.JOptionPane
+dialogs.contatosModal ..> model.bean.Clients
+dialogs.contatosModal ..> model.bean.Workers
+dialogs.contatosModal ..> model.dao.ClientsDAO
+infoGUI.PackageInfoGUI ..> java.lang.SuppressWarnings
+infoGUI.PackageInfoGUI ..> java.util.ArrayList
+infoGUI.PackageInfoGUI ..> javax.swing.DefaultComboBoxModel
+infoGUI.PackageInfoGUI ..> javax.swing.Icon
+infoGUI.PackageInfoGUI ..> javax.swing.ImageIcon
+infoGUI.PackageInfoGUI --|> javax.swing.JFrame
+infoGUI.PackageInfoGUI ..> javax.swing.JOptionPane
+infoGUI.PackageInfoGUI ..> javax.swing.table.DefaultTableModel
+infoGUI.PackageInfoGUI ..> model.bean.DeliveryWays
+infoGUI.PackageInfoGUI ..> model.bean.PackageItens
+infoGUI.PackageInfoGUI ..> model.bean.Packages
+infoGUI.PackageInfoGUI ..> model.dao.DeliveryWaysDAO
+infoGUI.PackageInfoGUI ..> model.dao.PackageItensDAO
+model.dao.BranchsDAO ..> com.mysql.jdbc.Connection
+model.dao.BranchsDAO ..> com.mysql.jdbc.PreparedStatement
+model.dao.BranchsDAO ..> connection.ConnectionFactory
+model.dao.BranchsDAO ..> java.sql.ResultSet
+model.dao.BranchsDAO ..> java.sql.SQLException
+model.dao.BranchsDAO ..> java.util.ArrayList
+model.dao.BranchsDAO ..> model.bean.Branchs
+model.dao.BrandsDAO ..> com.mysql.jdbc.Connection
+model.dao.BrandsDAO ..> com.mysql.jdbc.PreparedStatement
+model.dao.BrandsDAO ..> connection.ConnectionFactory
+model.dao.BrandsDAO ..> java.sql.ResultSet
+model.dao.BrandsDAO ..> java.sql.SQLException
+model.dao.BrandsDAO ..> java.util.ArrayList
+model.dao.BrandsDAO ..> model.bean.Brands
+model.dao.ClientsDAO ..> com.mysql.jdbc.Connection
+model.dao.ClientsDAO ..> com.mysql.jdbc.PreparedStatement
+model.dao.ClientsDAO ..> connection.ConnectionFactory
+model.dao.ClientsDAO ..> java.sql.ResultSet
+model.dao.ClientsDAO ..> java.sql.SQLException
+model.dao.ClientsDAO ..> java.util.ArrayList
+model.dao.ClientsDAO ..> javax.swing.JOptionPane
+model.dao.ClientsDAO ..> model.bean.Branchs
+model.dao.ClientsDAO ..> model.bean.Clients
+model.dao.DeliveriesDAO ..> com.mysql.jdbc.Connection
+model.dao.DeliveriesDAO ..> com.mysql.jdbc.PreparedStatement
+model.dao.DeliveriesDAO ..> connection.ConnectionFactory
+model.dao.DeliveriesDAO ..> java.sql.ResultSet
+model.dao.DeliveriesDAO ..> java.sql.SQLException
+model.dao.DeliveriesDAO ..> java.text.SimpleDateFormat
+model.dao.DeliveriesDAO ..> java.util.ArrayList
+model.dao.DeliveriesDAO ..> model.bean.Deliveries
+model.dao.DeliveriesDAO ..> model.bean.RoutesAux
+model.dao.DeliveryWaysDAO ..> com.mysql.jdbc.Connection
+model.dao.DeliveryWaysDAO ..> com.mysql.jdbc.PreparedStatement
+model.dao.DeliveryWaysDAO ..> connection.ConnectionFactory
+model.dao.DeliveryWaysDAO ..> java.sql.ResultSet
+model.dao.DeliveryWaysDAO ..> java.sql.SQLException
+model.dao.DeliveryWaysDAO ..> java.util.ArrayList
+model.dao.DeliveryWaysDAO ..> model.bean.DeliveryWays
+model.dao.JobsDAO ..> com.mysql.jdbc.Connection
+model.dao.JobsDAO ..> com.mysql.jdbc.PreparedStatement
+model.dao.JobsDAO ..> connection.ConnectionFactory
+model.dao.JobsDAO ..> java.sql.ResultSet
+model.dao.JobsDAO ..> java.sql.SQLException
+model.dao.JobsDAO ..> java.util.ArrayList
+model.dao.JobsDAO ..> model.bean.Jobs
+model.dao.ModelsDAO ..> com.mysql.jdbc.Connection
+model.dao.ModelsDAO ..> com.mysql.jdbc.PreparedStatement
+model.dao.ModelsDAO ..> connection.ConnectionFactory
+model.dao.ModelsDAO ..> java.sql.ResultSet
+model.dao.ModelsDAO ..> java.sql.SQLException
+model.dao.ModelsDAO ..> java.util.ArrayList
+model.dao.ModelsDAO ..> model.bean.Brands
+model.dao.ModelsDAO ..> model.bean.Models
+model.dao.PackageItensDAO ..> com.mysql.jdbc.Connection
+model.dao.PackageItensDAO ..> com.mysql.jdbc.PreparedStatement
+model.dao.PackageItensDAO ..> connection.ConnectionFactory
+model.dao.PackageItensDAO ..> java.sql.ResultSet
+model.dao.PackageItensDAO ..> java.sql.SQLException
+model.dao.PackageItensDAO ..> java.util.ArrayList
+model.dao.PackageItensDAO ..> model.bean.PackageItens
+model.dao.PackageItensDAO ..> model.bean.Packages
+model.dao.PackagesDAO ..> com.mysql.jdbc.Connection
+model.dao.PackagesDAO ..> com.mysql.jdbc.PreparedStatement
+model.dao.PackagesDAO ..> connection.ConnectionFactory
+model.dao.PackagesDAO ..> java.sql.ResultSet
+model.dao.PackagesDAO ..> java.sql.SQLException
+model.dao.PackagesDAO ..> java.util.ArrayList
+model.dao.PackagesDAO ..> model.bean.Clients
+model.dao.PackagesDAO ..> model.bean.DeliveryWays
+model.dao.PackagesDAO ..> model.bean.Packages
+model.dao.RoutesAuxDAO ..> com.mysql.jdbc.Connection
+model.dao.RoutesAuxDAO ..> com.mysql.jdbc.PreparedStatement
+model.dao.RoutesAuxDAO ..> connection.ConnectionFactory
+model.dao.RoutesAuxDAO ..> java.sql.ResultSet
+model.dao.RoutesAuxDAO ..> java.sql.SQLException
+model.dao.RoutesAuxDAO ..> java.util.ArrayList
+model.dao.RoutesAuxDAO ..> model.bean.Packages
+model.dao.RoutesAuxDAO ..> model.bean.Routes
+model.dao.RoutesAuxDAO ..> model.bean.RoutesAux
+model.dao.RoutesDAO ..> com.mysql.jdbc.Connection
+model.dao.RoutesDAO ..> com.mysql.jdbc.PreparedStatement
+model.dao.RoutesDAO ..> connection.ConnectionFactory
+model.dao.RoutesDAO ..> java.sql.ResultSet
+model.dao.RoutesDAO ..> java.sql.SQLException
+model.dao.RoutesDAO ..> java.util.ArrayList
+model.dao.RoutesDAO ..> model.bean.Routes
+model.dao.RoutesDAO ..> model.bean.Vehicles
+model.dao.RoutesDAO ..> model.bean.Workers
+model.dao.UsersDAO ..> com.mysql.jdbc.Connection
+model.dao.UsersDAO ..> com.mysql.jdbc.PreparedStatement
+model.dao.UsersDAO ..> connection.ConnectionFactory
+model.dao.UsersDAO ..> java.sql.ResultSet
+model.dao.UsersDAO ..> java.sql.SQLException
+model.dao.UsersDAO ..> java.util.ArrayList
+model.dao.UsersDAO ..> model.bean.Users
+model.dao.VehiclesDAO ..> com.mysql.jdbc.Connection
+model.dao.VehiclesDAO ..> com.mysql.jdbc.PreparedStatement
+model.dao.VehiclesDAO ..> connection.ConnectionFactory
+model.dao.VehiclesDAO ..> java.sql.ResultSet
+model.dao.VehiclesDAO ..> java.sql.SQLException
+model.dao.VehiclesDAO ..> java.util.ArrayList
+model.dao.VehiclesDAO ..> model.bean.Models
+model.dao.VehiclesDAO ..> model.bean.Vehicles
+model.dao.WorkersDAO ..> com.mysql.jdbc.Connection
+model.dao.WorkersDAO ..> com.mysql.jdbc.PreparedStatement
+model.dao.WorkersDAO ..> connection.ConnectionFactory
+model.dao.WorkersDAO ..> java.sql.ResultSet
+model.dao.WorkersDAO ..> java.sql.SQLException
+model.dao.WorkersDAO ..> java.util.ArrayList
+model.dao.WorkersDAO ..> model.bean.Branchs
+model.dao.WorkersDAO ..> model.bean.Jobs
+model.dao.WorkersDAO ..> model.bean.Workers
+modelsUtil.GenericComboBoxModel ..> java.lang.SuppressWarnings
+modelsUtil.GenericComboBoxModel ..> java.util.ArrayList
+modelsUtil.GenericComboBoxModel ..> java.util.List
+modelsUtil.GenericComboBoxModel --|> javax.swing.DefaultComboBoxModel
+@enduml
